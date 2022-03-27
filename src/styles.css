@@ -1,0 +1,52 @@
+body {
+  font-family: arial, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  padding: 5px 10px;
+}
+
+button {
+  transition: opacity 0.3s;
+  margin-left: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.incompleate-area,
+.complete-area {
+  min-height: 200px;
+  padding: 25px 20px;
+  margin-top: 20px;
+}
+
+.input-area {
+  background-color: #000;
+}
+.incompleate-area {
+  background-color: #c6ff2e;
+}
+.complete-area {
+  background-color: #ffffe0;
+}
+
+.area-list:not(:first-child) {
+  margin-top: 15px;
+}

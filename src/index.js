@@ -8,6 +8,14 @@ const onClickAdd = () => {
   const inputText = inputArea.value;
   inputArea.value = "";
 
+  createImcompliteList(inputText);
+};
+
+const deleteFromIncompleteList = (target) => {
+  incompleteList.removeChild(target);
+};
+
+const createImcompliteList = (text) => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
   completeButton.addEventListener("click", () => {
@@ -49,21 +57,17 @@ const onClickAdd = () => {
   const list = document.createElement("li");
   const paragraph = document.createElement("p");
   list.className = "area-list";
-  paragraph.innerText = inputText;
+  paragraph.innerText = text;
 
   list.appendChild(paragraph);
   list.appendChild(completeButton);
   list.appendChild(deleteButton);
 
-  if (inputText === "") {
+  if (text === "") {
     return;
   } else {
     incompleteList.appendChild(list);
   }
-};
-
-const deleteFromIncompleteList = (target) => {
-  incompleteList.removeChild(target);
 };
 
 document

@@ -45,13 +45,7 @@ const createImcompliteList = (text) => {
     const backTarget = backButton.parentNode;
     completeList.removeChild(backTarget);
     const text = backTarget.firstElementChild.innerText;
-    const paragraph = document.createElement("p");
-    backTarget.textContent = null;
-    backTarget.appendChild(paragraph);
-    paragraph.innerText = text;
-    backTarget.appendChild(completeButton);
-    backTarget.appendChild(deleteButton);
-    incompleteList.appendChild(backTarget);
+    createImcompliteList(text);
   });
 
   const list = document.createElement("li");
